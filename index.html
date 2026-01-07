@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pemrograman Web 1</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #f4f6f8;
+        color: #333;
+      }
+      header {
+        background: #1e88e5;
+        color: white;
+        padding: 25px 15px;
+        text-align: center;
+      }
+      header h1 {
+        margin: 0;
+      }
+
+      nav {
+        background: #1565c0;
+        display: flex;
+        justify-content: center;
+      }
+      nav a {
+        color: white;
+        padding: 12px 18px;
+        text-decoration: none;
+      }
+      nav a:hover {
+        background: #0d47a1;
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: 30px auto;
+        padding: 0 20px;
+      }
+
+      .card {
+        background: white;
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .btn {
+        margin-top: 10px;
+        padding: 8px 14px;
+        border: none;
+        background: #1e88e5;
+        color: white;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      .btn:hover {
+        background: #0d47a1;
+      }
+
+      .materi {
+        display: none;
+        margin-top: 15px;
+      }
+
+      footer {
+        text-align: center;
+        padding: 15px;
+        background: #1e88e5;
+        color: white;
+        margin-top: 40px;
+      }
+
+      @media (max-width: 600px) {
+        nav {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Pemrograman Web 1</h1>
+      <p>Media Penyajian Materi Perkuliahan</p>
+    </header>
+
+    <nav>
+      <a href="#p1">Pertemuan 1</a>
+      <a href="#p2">Pertemuan 2</a>
+      <a href="#p3">Pertemuan 3</a>
+      <a href="#p4">Pertemuan 4</a>
+    </nav>
+
+    <div class="container">
+      <div class="card" id="p1">
+        <h2>Pertemuan 1: Pengenalan Web</h2>
+        <button class="btn" onclick="toggleMateri('m1')">Lihat Materi</button>
+        <div class="materi" id="m1">
+          <p><strong>Pengenalan Web</strong></p>
+          <p>
+            Pertemuan ini membahas konsep dasar World Wide Web (WWW), proses
+            kerja web, serta pengenalan HTML sebagai bahasa markup untuk
+            membangun halaman web.
+          </p>
+          <ul>
+            <li>
+              <strong>World Wide Web (WWW)</strong> adalah kumpulan halaman web
+              di seluruh dunia yang saling terhubung melalui hyperlink dan dapat
+              diakses melalui internet menggunakan browser.
+            </li>
+            <li>
+              Web bekerja dengan konsep <strong>client–server</strong>, di mana
+              browser sebagai client meminta data dan server mengirimkan halaman
+              web.
+            </li>
+            <li>
+              Komunikasi antara client dan server menggunakan protokol
+              <strong>HTTP</strong>.
+            </li>
+            <li>
+              <strong>Browser</strong> berfungsi menerjemahkan dokumen HTML
+              menjadi tampilan yang dapat dibaca pengguna.
+            </li>
+            <li>
+              <strong>HTML (Hypertext Markup Language)</strong> digunakan untuk
+              menyusun struktur halaman web.
+            </li>
+            <li>
+              Struktur dasar HTML terdiri dari tag <code>&lt;html&gt;</code>,
+              <code>&lt;head&gt;</code>, dan <code>&lt;body&gt;</code>.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card" id="p2">
+        <h2>Pertemuan 2: Basic Tag HTML</h2>
+        <button class="btn" onclick="toggleMateri('m2')">Lihat Materi</button>
+        <div class="materi" id="m2">
+          <p><strong>Struktur dan Tag Dasar HTML</strong></p>
+          <p>
+            Pertemuan ini membahas struktur penulisan dokumen HTML serta
+            penggunaan tag dasar yang digunakan untuk membangun halaman web.
+          </p>
+          <ul>
+            <li>
+              Dokumen HTML memiliki struktur utama yang terdiri dari tag
+              <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, dan
+              <code>&lt;body&gt;</code>.
+            </li>
+            <li>
+              Bagian <code>&lt;head&gt;</code> berisi informasi pendukung
+              seperti judul halaman (<code>&lt;title&gt;</code>), meta tag, CSS,
+              dan JavaScript.
+            </li>
+            <li>
+              Bagian <code>&lt;body&gt;</code> berisi seluruh konten yang
+              ditampilkan pada halaman web.
+            </li>
+            <li>
+              Tag heading (<code>&lt;h1&gt;</code> sampai
+              <code>&lt;h6&gt;</code>) digunakan untuk judul dengan tingkatan
+              berbeda.
+            </li>
+            <li>
+              Tag paragraf (<code>&lt;p&gt;</code>) digunakan untuk menampilkan
+              teks.
+            </li>
+            <li>
+              Tag <code>&lt;br&gt;</code> digunakan untuk membuat baris baru,
+              sedangkan <code>&lt;hr&gt;</code> untuk membuat garis pemisah.
+            </li>
+            <li>
+              List terurut (<code>&lt;ol&gt;</code>) dan tidak terurut
+              (<code>&lt;ul&gt;</code>) digunakan untuk menampilkan daftar.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card" id="p3">
+        <h2>Pertemuan 3: Format Teks dan Karakter Khusus</h2>
+        <button class="btn" onclick="toggleMateri('m3')">Lihat Materi</button>
+        <div class="materi" id="m3">
+          <p><strong>Format Teks dan Karakter Khusus</strong></p>
+          <p>
+            Pertemuan ini membahas penggunaan tag HTML untuk mengatur format
+            teks serta penulisan karakter khusus agar tampilan halaman web lebih
+            informatif dan mudah dibaca.
+          </p>
+          <ul>
+            <li>
+              Format teks dasar meliputi <code>&lt;b&gt;</code> dan
+              <code>&lt;strong&gt;</code> untuk teks tebal,
+              <code>&lt;i&gt;</code> dan <code>&lt;em&gt;</code> untuk teks
+              miring, serta <code>&lt;u&gt;</code> untuk garis bawah.
+            </li>
+            <li>
+              Tag <code>&lt;small&gt;</code> dan
+              <code>&lt;big&gt;</code> digunakan untuk mengatur ukuran teks
+              relatif terhadap ukuran normal.
+            </li>
+            <li>
+              Tag <code>&lt;sub&gt;</code> (subscript) dan
+              <code>&lt;sup&gt;</code> (superscript) digunakan untuk penulisan
+              rumus atau notasi khusus.
+            </li>
+            <li>
+              Tag <code>&lt;s&gt;</code> atau <em>strike</em> digunakan untuk
+              mencoret teks.
+            </li>
+            <li>
+              Marquee digunakan untuk membuat teks berjalan pada halaman web.
+            </li>
+            <li>
+              Karakter khusus HTML ditulis menggunakan entity, seperti
+              <code>&amp;copy;</code> (©), <code>&amp;reg;</code> (®),
+              <code>&amp;lt;</code> (&lt;), dan <code>&amp;gt;</code> (&gt;).
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card" id="p4">
+        <h2>Pertemuan 4: Hyperlink</h2>
+        <button class="btn" onclick="toggleMateri('m4')">Lihat Materi</button>
+        <div class="materi" id="m4">
+          <p>
+            <strong>Tujuan Pembelajaran:</strong><br />
+            Mahasiswa mampu memahami dan mempraktikkan penggunaan hyperlink pada
+            halaman web.
+          </p>
+
+          <h4>Pengertian Hyperlink</h4>
+          <p>
+            Hyperlink adalah fasilitas pada HTML yang digunakan untuk
+            menghubungkan teks atau gambar ke halaman lain, bagian tertentu pada
+            halaman yang sama, website lain, maupun ke email.
+          </p>
+
+          <h4>Jenis-Jenis Hyperlink</h4>
+          <ol>
+            <li>
+              <strong>Link Relatif</strong><br />
+              Digunakan untuk berpindah halaman dalam satu website.<br />
+              <code>&lt;a href="profil.html"&gt;Profil&lt;/a&gt;</code>
+            </li>
+
+            <li>
+              <strong>Link Absolut</strong><br />
+              Digunakan untuk menuju website lain.<br />
+              <code
+                >&lt;a href="https://www.google.com"&gt;Google&lt;/a&gt;</code
+              >
+            </li>
+
+            <li>
+              <strong>Link Anchor</strong><br />
+              Digunakan untuk menuju bagian tertentu pada halaman yang sama.<br />
+              <code>&lt;a href="#materi"&gt;Ke Materi&lt;/a&gt;</code>
+            </li>
+
+            <li>
+              <strong>Link Email</strong><br />
+              Digunakan untuk membuka aplikasi email.<br />
+              <code
+                >&lt;a href="mailto:email@domain.com"&gt;Kirim
+                Email&lt;/a&gt;</code
+              >
+            </li>
+          </ol>
+
+          <h4>Kesimpulan</h4>
+          <p>
+            Hyperlink sangat penting dalam pembuatan website karena memudahkan
+            navigasi dan menghubungkan informasi antar halaman.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2026 Pemrograman Web 1</p>
+    </footer>
+
+    <script>
+      function toggleMateri(id) {
+        const el = document.getElementById(id);
+        el.style.display = el.style.display === "block" ? "none" : "block";
+      }
+    </script>
+  </body>
+</html>
